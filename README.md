@@ -84,9 +84,9 @@ When the model predicts the customer is **likely to churn** (Red):
 
 ---
 
-### Footer
+### Developer
 For more details or any questions, feel free to contact the developer.
 
 **Developed by Mohd Sameer Hussain**  
 Email: [mohdsameerhussain28@gmail.com](mailto:mohdsameerhussain28@gmail.com)  
-Call: [☎️ +91-6303452296](tel:+916303452296)
+Call/whatsapp: [☎️ +91-6303452296](tel:+916303452296)

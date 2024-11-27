@@ -73,7 +73,7 @@ This is the input form where users can provide customer details:
 ### Prediction Result - Not Likely to Churn
 When the model predicts the customer is **not likely to churn** (Green):
 
-![Prediction Result - Not Churn](static/not churn.png)
+![Prediction Result - Not Churn](static/not_churn.png)
 
 ---
 

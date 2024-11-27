@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        h4 {
+            text-align: center;
+            color: lightcoral;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            grid-column: span 2;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .prediction {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .churn {
+            color: red;
+        }
+        .not-churn {
+            color: green;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <h4>This will predict whether the individual will Churn or Not churn the service based on provided criteria</h4>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="credit_score">Credit Score</label>
+                <input type="number" id="credit_score" name="credit_score" required>
+            </div>
+            <div class="form-group">
+                <label for="geography">Geography</label>
+                <select id="geography" name="geography" required>
+                    <option value="France">France</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Germany">Germany</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="tenure">Tenure (Years)</label>
+                <input type="number" id="tenure" name="tenure" required>
+            </div>
+            <div class="form-group">
+                <label for="balance">Balance</label>
+                <input type="number" step="0.01" id="balance" name="balance" required>
+            </div>
+            <div class="form-group">
+                <label for="num_of_products">Number of Products</label>
+                <input type="number" id="num_of_products" name="num_of_products" required>
+            </div>
+            <div class="form-group">
+                <label for="has_credit_card">Has Credit Card?</label>
+                <select id="has_credit_card" name="has_credit_card" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="is_active_member">Is Active Member?</label>
+                <select id="is_active_member" name="is_active_member" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="estimated_salary">Estimated Salary</label>
+                <input type="number" step="0.01" id="estimated_salary" name="estimated_salary" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <div class="prediction {{ prediction_class }}">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+    <footer>
+        <p>Developed by Mohd Sameer Hussain | Email: <a href="mailto:mohdsameerhussain28@gmail.com">mohdsameerhussain28@gmail.com</a> | Call: <a href="tel:+916303452296">+91-6303452296</a></p>
+    </footer>
+</body>
+</html>

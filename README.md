@@ -18,17 +18,27 @@ The goal of this project is to predict whether a customer will churn (stop using
 
 ---
 
-💡 **Why This Project?**
+## Screenshots
 
-Customer retention is crucial for business growth and profitability. Churn prediction helps businesses:
+### Input Form
+This is the input form where users can provide customer details:
 
-- Identify at-risk customers early.
-- Formulate personalized strategies to retain these customers.
-- Save costs associated with acquiring new customers.
-
-This project aims to bridge the gap between predictive analytics and actionable insights by combining machine learning and web deployment.
+![Input Form](static/interface.png)
 
 ---
+
+### Prediction Result - Not Likely to Churn
+When the model predicts the customer is **not likely to churn** (Green):
+
+![Prediction Result - Not Churn](static/not_churn.png)
+
+---
+
+### Prediction Result - Likely to Churn
+When the model predicts the customer is **likely to churn** (Red):
+
+![Prediction Result - Churn](static/churn.png)
+
 
 📝 **Description**
 ### 1. **Data Processing**
@@ -59,30 +69,17 @@ Features:
 - The model achieves high accuracy on the test set, effectively predicting customer churn.
 - Web application provides an intuitive interface for users to test predictions with real-time feedback.
 
----
 
-## Demo Screenshots
+💡 **Why This Project?**
 
-### Input Form
-This is the input form where users can provide customer details:
+Customer retention is crucial for business growth and profitability. Churn prediction helps businesses:
 
-![Input Form](static/interface.png)
+- Identify at-risk customers early.
+- Formulate personalized strategies to retain these customers.
+- Save costs associated with acquiring new customers.
 
----
+This project aims to bridge the gap between predictive analytics and actionable insights by combining machine learning and web deployment.
 
-### Prediction Result - Not Likely to Churn
-When the model predicts the customer is **not likely to churn** (Green):
-
-![Prediction Result - Not Churn](static/not_churn.png)
-
----
-
-### Prediction Result - Likely to Churn
-When the model predicts the customer is **likely to churn** (Red):
-
-![Prediction Result - Churn](static/churn.png)
-
----
 
 ### Developer
 For more details or any questions, feel free to contact the developer.
